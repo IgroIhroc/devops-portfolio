@@ -48,7 +48,15 @@ Docker Compose version v5.7.0
 29.9.3
 ```
 
-Node.js встановлено через fnm, гілку 26 встановлено командою `fnm install --lts`. Для нової сесії PowerShell середовище ініціалізується командою `fnm env --shell powershell | Out-String | Invoke-Expression`. Python 3.15.2 керується Python Install Manager, що підтверджує `py list`. Наявний Compose має номер v5.7.0. Docker підтверджує функціональну сумісність v5 із v2 та той самий виклик `docker compose`. [Історія версій Compose](https://docs.docker.com/compose/intro/history/)
+Node.js встановлено через fnm, гілку 26 встановлено командою `fnm install --lts`. Для нової сесії PowerShell середовище ініціалізується командою `fnm env --shell powershell | Out-String | Invoke-Expression`. Python 3.15.2 керується Python Install Manager, що підтверджує `py list`.
+
+Для перевірки саме Compose v2 офіційний плагін v2.40.3 встановлено в окремий профіль Docker CLI. Вбудований у Docker Compose v5.7.0 доступний у стандартному профілі. [Реліз Compose v2.40.3](https://github.com/docker/compose/releases/tag/v2.40.3) · [Історія версій Compose](https://docs.docker.com/compose/intro/history/)
+
+```text
+> $env:DOCKER_CONFIG = Join-Path $env:LOCALAPPDATA 'DevOpsPortfolio\docker-v2'
+> docker compose version
+Docker Compose version v2.40.3
+```
 
 Менеджер версій дає змогу тримати кілька версій інтерпретатора паралельно. Наприклад, старий проєкт може потребувати Node.js 24, а новий — Node.js 26. Зафіксована версія дає команді та CI однакове середовище і дозволяє оновлювати проєкти незалежно.
 
