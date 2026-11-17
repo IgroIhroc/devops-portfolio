@@ -91,4 +91,4 @@ Hi IgroIhroc! You've successfully authenticated, but GitHub does not provide she
 
 На дошку [DevOps Portfolio](https://github.com/users/IgroIhroc/projects/5/views/1) імпортовано 11 задач курсу. Колонки — Backlog, In Progress, Review та Done.
 
-GitHub Projects автоматично додає відкриті задачі й pull requests із цього репозиторію. Для нових задач правило встановлює Backlog. Для нових PR початковим статусом є Review. Злиті PR і закриті задачі переходять у Done. [Автоматизації дошки](https://github.com/users/IgroIhroc/projects/5/workflows)
+GitHub Projects автоматично додає відкриті задачі й pull requests із цього репозиторію. Для нових задач правило встановлює Backlog. Злиті PR і закриті задачі переходять у Done. Відкритий PR #15 автоматично з’явився на дошці без статусу, тому перехід у Review поки виконується вручну. [Автоматизації дошки](https://github.com/users/IgroIhroc/projects/5/workflows)
