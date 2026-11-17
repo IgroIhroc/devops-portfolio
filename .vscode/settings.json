@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "yaml.validate": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ["/.github/workflows/*.yml", "/.github/workflows/*.yaml"],
+    "https://json.schemastore.org/compose-spec.json": ["**/compose*.yml", "**/compose*.yaml", "**/docker-compose*.yml", "**/docker-compose*.yaml"]
+  }
+}
