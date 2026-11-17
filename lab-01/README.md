@@ -62,16 +62,15 @@ Docker Compose version v2.40.3
 
 ## 3. GitHub і доступ
 
-Профіль — [IgroIhroc](https://github.com/IgroIhroc). Підтвердження імені, опису, 2FA і успішного SSH-входу очікує дій власника облікового запису.
+Профіль GitHub — [IgroIhroc](https://github.com/IgroIhroc). Ім’я та короткий опис профілю ще потрібно заповнити. Двофакторна автентифікація (2FA) вимкнена.
 
-Попередня перевірка SSH із суворою перевіркою хоста зупинилася на такому повідомленні:
+Власник облікового запису виконав `ssh -T git@github.com` і отримав підтвердження автентифікації:
 
 ```text
-No ED25519 host key is known for github.com and you have requested strict checking.
-Host key verification failed.
+Hi IgroIhroc! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-Для повторної перевірки потрібно створити ключ через `ssh-keygen -t ed25519` із парольною фразою, додати файл `.pub` до GitHub, звірити відбиток сервера та виконати `ssh -T git@github.com`. [Відбитки ключів GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints) · [Перевірка підключення](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+Для відтворення налаштування потрібно створити ключ через `ssh-keygen -t ed25519` із парольною фразою, додати файл `.pub` до GitHub, звірити відбиток сервера та виконати `ssh -T git@github.com`. [Відбитки ключів GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints) · [Перевірка підключення](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 
 Приватний ключ дає змогу підписувати запити від імені власника скрізь, де довіряють його публічній частині. Парольна фраза захищає ключ на диску, але копія в історії Git дає стороннім час на офлайн-підбір.
 
